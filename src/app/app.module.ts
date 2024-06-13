@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { BookListComponent } from './book-list/book-list.component';
 import { HomeComponent } from './home/home.component';
+import { booksReducer } from './state/books.reducer';
+import { collectionReducer } from './state/collection.reducer';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({books: booksReducer, collection: collectionReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
