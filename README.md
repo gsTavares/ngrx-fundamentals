@@ -30,6 +30,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 - ngrx is based on Redux pattern
 - a **store** is the place that we define all the states that will be available on the application
-- components can't interact directly with the **store**. to do that, they must use the it to pick a **selector**
+- components can't interact directly with the **store**. to do that, they must use it to pick a **selector**
 - a **selector** its a reference to a state and, when we pick one with a component, it will return a **observable**, so every time the state changes, a new value will be emitted
 - we can change a state using **actions**: a signature that describes what will happen to the state when we call them. actions will be handled by a **reducer** function that will manipulate the state. the return type of this functions should match with the initial state type definition
